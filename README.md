@@ -1,4 +1,4 @@
-jProjeto em aula 1
+Projeto em aula 1
 ==============
 
 Primeiro projeto a ser criado na sala de aula 
