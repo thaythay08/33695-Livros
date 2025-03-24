@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>opaaa</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Não julgue um livro pela capa</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  <header>
+    <h1>Não julgue o livro pela capa</h1>
+    <p>Descubra novas leituras incríveis sem o pré julgamento ao ver a capa.</p>
+    <div class="about">
+      <p>
+        Olá! Eu sou a Thay e este site é um espaço para compartilhar livros sem mostrar a capa. A ideia é indicar livros somente com o título e uma breve descrição, fazendo com que você se atraia pela ideia central do livro sem ter um pré julgamento ao ver a capa! 📚💖
+      </p>
+    </div>
+  </header>
+
+  <div class="container filters">
+    <input type="text" id="searchBar" placeholder="Buscar por título..." oninput="renderBooks()" />
+    <input type="text" id="authorFilter" placeholder="Filtrar por autor..." oninput="renderBooks()" />
+    <select id="sortOption" onchange="renderBooks()">
+      <option value="">Ordenar</option>
+      <option value="title">Título (A-Z)</option>
+      <option value="author">Autor (A-Z)</option>
+    </select>
+  </div>
+
+  <div class="container" id="book-list"></div>
+
+  <div class="container add-book">
+    <h2>Faça uma Indicação!</h2>
+    <input type="text" id="title" placeholder="Título do livro" />
+    <input type="text" id="author" placeholder="Autor" />
+    <textarea id="description" placeholder="Descrição do livro"></textarea>
+    <select id="category">
+      <option value="Romance">Romance</option>
+      <option value="Fantasia">Fantasia</option>
+      <option value="Distopia">Distopia</option>
+      <option value="Autoajuda">Autoajuda</option>
+      <option value="Não ficção">Não ficção</option>
+    </select>
+    <button onclick="addBook()">Adicionar Livro</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
